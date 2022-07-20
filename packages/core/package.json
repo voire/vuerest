@@ -1,0 +1,30 @@
+{
+  "name": "@voire/vuerest-core",
+  "version": "1.0.0",
+  "license": "MIT",
+  "type": "module",
+  "author": "Pavel Yankovski <https://github.com/pyncz>",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.cjs",
+  "scripts": {
+    "build": "unbuild"
+  },
+  "dependencies": {
+    "@vueuse/core": "^8.9.4",
+    "@voire/type-utils": "^1.1.0",
+    "ohmyfetch": "^0.4.18",
+    "ufo": "^0.8.5",
+    "vue": "^3.2.37"
+  },
+  "devDependencies": {
+    "unbuild": "^0.7.4"
+  }
+}
