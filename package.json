@@ -14,7 +14,6 @@
   ],
   "scripts": {
     "build": "nr gen:exports && unbuild && nr cleanup",
-    "gen:types": "esno scripts/genTypes.ts",
     "gen:exports": "esno scripts/genExports.ts",
     "cleanup": "esno scripts/cleanUp.ts",
     "semantic-release": "semantic-release"
