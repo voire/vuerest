@@ -4,5 +4,6 @@
   ],
   "rollup": {
     "emitCJS": true
-  }
+  },
+  "declarations": true
 }

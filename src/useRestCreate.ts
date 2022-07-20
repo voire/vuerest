@@ -4,6 +4,13 @@ import type { Mapper } from '@voire/type-utils'
 import type { FetchOptions } from 'ohmyfetch'
 import { $fetch } from 'ohmyfetch'
 
+/**
+ * Return typed REST Create method.
+ *
+ * @param url
+ * @param mapper
+ * @param domainOptions
+ */
 export function useRestCreate<
   TData extends {} = {},
   TModel extends {} = TData,
@@ -26,3 +33,5 @@ export function useRestCreate<
     return mapper(res)
   }
 }
+
+export type UseEyeDropperReturn = ReturnType<typeof useRestCreate>
