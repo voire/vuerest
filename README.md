@@ -23,7 +23,8 @@ const mappedUsers = await read({ status: 'active' })
 | `useRestCreate` | POST |
 | `useRestReplace` | PUT |
 | `useRestUpdate` | PATCH |
-| `useRestRemove` | DELETE |
+| `useRestRemove` | DELETE by id |
+| `useRestBatchRemove` | DELETE |
 
 
 ## Domains

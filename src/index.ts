@@ -5,6 +5,7 @@ export * from './useRestCreate'
 export * from './useRestReplace'
 export * from './useRestUpdate'
 export * from './useRestRemove'
+export * from './useRestBatchRemove'
 
 // domains
 export * from './useRestReadableDomain'
