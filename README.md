@@ -62,10 +62,16 @@ export function useThatOneDomain<...>(
   return {
     ...useRestReadableDomain<...>(url, getMapper, readMapper, domainOptions),
     create: useRestCreate<...>(url, getMapper, domainOptions),
-    remove: useRestRemove<TKey>(url, domainOptions),
+    remove: useRestRemove<...>(url, domainOptions),
   }
 }
 ```
+
+### Additional http client's options
+
+Under the hood, we use [ohmyfetch](https://github.com/unjs/ohmyfetch), so you may provide additional options for each method OR for a whole domain (check `domainOptions` argument), like interceptors, abort signal etc.
+
+Go deeper into ohmyfetch repo to get details about the usage.
 
 ## Yeah, but ...why?
 
