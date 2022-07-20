@@ -12,7 +12,7 @@ Generate and use type safe methods to call RESTful API.
 const readUsers = useRestRead<TDataFromAPI, TUserModel, TFilters>('/api/users', mapDataToUser)
 
 ...
-const mappedUsers = await read({ status: 'active' })
+const mappedUsers = await readUsers({ status: 'active' })
 ```
 
 **All methods:**
