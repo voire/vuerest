@@ -1,9 +1,20 @@
 {
   "name": "vuerest",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "license": "MIT",
   "type": "module",
   "author": "Pavel Yankovski <https://github.com/pyncz>",
+  "keywords": [
+    "typescript",
+    "vue",
+    "vue3",
+    "vue-next",
+    "composable"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "semantic-release": "semantic-release"
+  },
   "exports": {
     ".": {
       "import": "./dist/index.mjs",
@@ -14,9 +25,6 @@
     "dist"
   ],
   "main": "./dist/index.cjs",
-  "scripts": {
-    "build": "unbuild"
-  },
   "dependencies": {
     "@vueuse/core": "^8.9.4",
     "@voire/type-utils": "^1.1.0",
@@ -25,6 +33,19 @@
     "vue": "^3.2.37"
   },
   "devDependencies": {
-    "unbuild": "^0.7.4"
+    "unbuild": "^0.7.4",
+    "semantic-release": "^19.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/voire/vuerest.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "release": {
+    "branches": [
+      "main"
+    ]
   }
 }
