@@ -1,5 +1,5 @@
 ## vuerest
-Set of composables to implement api service.
+Set of composables for RESTful API calls in Clean architecture.
 
 ![vuerest](.github/banner.jpg)
 
@@ -104,4 +104,5 @@ If your approach to writing enterprise applications is quite similar, maybe thes
 Check [this repo](https://github.com/voire/nuxt-vuerest) to auto import the composables in your Nuxt application.
 
 > **Note**
+>
 > Only Nuxt 3 is supported

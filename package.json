@@ -1,5 +1,6 @@
 {
   "name": "@voire/vuerest",
+  "description": "Set of composables for RESTful API calls in Clean architecture.",
   "version": "0.0.0-development",
   "license": "MIT",
   "type": "module",
