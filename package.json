@@ -13,7 +13,10 @@
     "composable"
   ],
   "scripts": {
-    "build": "unbuild",
+    "build": "nr gen:exports && unbuild && nr cleanup",
+    "gen:types": "esno scripts/genTypes.ts",
+    "gen:exports": "esno scripts/genExports.ts",
+    "cleanup": "esno scripts/cleanUp.ts",
     "semantic-release": "semantic-release"
   },
   "exports": {
@@ -26,16 +29,20 @@
     "dist"
   ],
   "main": "./dist/index.cjs",
+  "types": "./dist/index.d.ts",
   "dependencies": {
-    "@vueuse/core": "^8.9.4",
+    "@types/node": "^18.0.6",
     "@voire/type-utils": "^1.1.0",
+    "@vueuse/core": "^8.9.4",
     "ohmyfetch": "^0.4.18",
     "ufo": "^0.8.5",
     "vue": "^3.2.37"
   },
   "devDependencies": {
-    "unbuild": "^0.7.4",
-    "semantic-release": "^19.0.2"
+    "@antfu/ni": "^0.17.2",
+    "esno": "^0.16.3",
+    "semantic-release": "^19.0.2",
+    "unbuild": "^0.7.4"
   },
   "repository": {
     "type": "git",
