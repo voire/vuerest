@@ -5,7 +5,7 @@ import { withTrailingSlash } from 'ufo'
 import type { FetchOptions } from 'ohmyfetch'
 import { $fetch } from 'ohmyfetch'
 
-export function useRestGet<
+export function useRestFind<
   TData extends {} = {},
   TModel extends {} = TData,
   TFilters extends {} = Partial<TData>,

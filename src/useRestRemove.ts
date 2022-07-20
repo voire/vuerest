@@ -5,7 +5,7 @@ import { unref } from 'vue'
 import type { Numeric } from '@voire/type-utils'
 import { withTrailingSlash } from 'ufo'
 
-export function useRestDelete<
+export function useRestRemove<
   TKey = Numeric,
 >(
   url: MaybeRef<string>,

@@ -1,7 +1,7 @@
 import type { MaybeRef } from '@vueuse/core'
 import type { Mapper, Numeric } from '@voire/type-utils'
 import type { FetchOptions } from 'ohmyfetch'
-import { useRestGet } from './useRestGet'
+import { useRestFind } from './useRestFind'
 import { useRestRead } from './useRestRead'
 
 export function useRestReadableDomain<
@@ -19,7 +19,7 @@ export function useRestReadableDomain<
   domainOptions?: FetchOptions<'json'>,
 ) {
   return {
-    get: useRestGet<TGetData, TGetModel, TGetFilters, TKey>(url, getMapper, domainOptions),
+    find: useRestFind<TGetData, TGetModel, TGetFilters, TKey>(url, getMapper, domainOptions),
     read: useRestRead<TReadData, TReadModel, TReadFilters>(url, readMapper, domainOptions),
   }
 }

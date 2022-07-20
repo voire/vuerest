@@ -1,10 +1,10 @@
 // separated methods
 export * from './useRestRead'
-export * from './useRestGet'
+export * from './useRestFind'
 export * from './useRestCreate'
 export * from './useRestReplace'
 export * from './useRestUpdate'
-export * from './useRestDelete'
+export * from './useRestRemove'
 
 // domains
 export * from './useRestReadableDomain'
