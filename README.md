@@ -31,13 +31,13 @@ const mappedUsers = await readUsers({ status: 'active' })
 
 This makes more sense if we use not just separated methods but whole domains - sets of different methods for one API app.
 
-Let's say, we have an API app with read (GET), find (GET by id), and create (POST) methods. In this case, we may just generate multiple methods with one combined composable:
+Let's say, we have an API app with read (GET) and find (GET by id). In this case, we may just generate multiple methods with one combined composable:
 ```ts
-const { find, read, create, update, replace, remove } = useRestReadableDomain<...>( ... )
+const { find, read } = useRestReadableDomain<...>( ... )
 ```
 Or even for all the RESTful methods:
 ```ts
-const { find, read, create, } = useRestDomain<...>( ... )
+const { find, read, create, update, replace, remove } = useRestDomain<...>( ... )
 ```
 
 You can use these combinations just as composables or move such logic onto separated level using it as a part of some domain-specific store.
@@ -52,7 +52,7 @@ You can use these combinations just as composables or move such logic onto separ
 
 ### Custom methods' combinations
 
-Feel free to 'construct' your own composables for specific domains with separated methods:
+Feel free to 'construct' your own composables for specific domains with separated methods. For example, for a domain with `read`, `find`, `create` and `remove` methods provided, you may specify something like this:
 ```ts
 export function useThatOneDomain<...>(
   url: MaybeRef<string>,
@@ -66,6 +66,8 @@ export function useThatOneDomain<...>(
     remove: useRestRemove<...>(url, domainOptions),
   }
 }
+
+const { read, find, create, remove } = useThatOneDomain<...>( ... )
 ```
 
 ### Additional http client's options
