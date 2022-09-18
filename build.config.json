@@ -1,9 +1,0 @@
-{
-  "entries": [
-    "./src/temp/index"
-  ],
-  "rollup": {
-    "emitCJS": true
-  },
-  "declaration": true
-}
